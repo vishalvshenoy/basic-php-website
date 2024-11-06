@@ -1,0 +1,11 @@
+version: '1.0'
+services:
+  web:
+       build:
+               context: ./
+               dockerfile: Dockerfile
+       container_name: basic_php
+       volumes:
+          - ./:/var/www/html/ 
+       ports:
+         - 8008:80
